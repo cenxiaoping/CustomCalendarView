@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+
+    <View
+        android:id="@+id/view_line1"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:background="#F6F6F6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:text="2020-05"
+        android:textColor="#171717"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_line1" />
+
+    <ImageView
+        android:id="@+id/iv_last_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="21dp"
+        android:src="@mipmap/ic_arrow_left"
+        app:layout_constraintBottom_toBottomOf="@id/tv_date"
+        app:layout_constraintRight_toLeftOf="@id/tv_date"
+        app:layout_constraintTop_toTopOf="@id/tv_date" />
+
+    <ImageView
+        android:id="@+id/iv_next_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="21dp"
+        android:src="@mipmap/ic_arrow_right"
+        app:layout_constraintBottom_toBottomOf="@id/tv_date"
+        app:layout_constraintLeft_toRightOf="@id/tv_date"
+        app:layout_constraintTop_toTopOf="@id/tv_date" />
+
+    <View
+        android:id="@+id/view_line2"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:background="#EDEDED"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_next_month" />
+
+    <com.example.customcalendarview.widget.CustomCalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_line2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
